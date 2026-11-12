@@ -125,9 +125,26 @@
     <div class="st-wrap reveal"><h2 class="st">Proyectos</h2><canvas class="deco d-proy" data-scene="shape" data-shape="circle" data-key="red" data-cap="800" data-seed="16" aria-hidden="true"></canvas></div>
     <div class="projects">
 
+      <article class="prj reveal" id="p-agentsprint">
+        <div class="prj__l">
+          <canvas class="emb" data-scene="emblem" data-kind="board" data-seed="17" aria-hidden="true"></canvas>
+          <span class="chip mono">Publicado en npm, v0.2.1</span>
+          <span class="tag mono">Código abierto, licencia MIT</span>
+        </div>
+        <div class="prj__m">
+          <h3>AgentSprint: tablero de sprints que le da memoria a los agentes de código</h3>
+          <p class="prj__sum">Un tablero de sprints que vive en Git y le da memoria a los agentes de código: cada sesión empieza con un resumen de dónde quedó el proyecto y termina con un traspaso para la siguiente.</p>
+          
+          <details open><summary>Ver detalle</summary><ul class="points"><li>Las tareas, los sprints y los criterios de aceptación son archivos Markdown dentro del repositorio, así que el historial de Git es el historial del tablero. Sin cuentas, sin nube y sin servidor que cuidar.</li><li>Servidor MCP con 42 herramientas y 7 prompts: cada sesión de Claude Code recibe el resumen del proyecto (sprint activo, qué espera revisión, qué sigue, bloqueos y lecciones) y cierra con un traspaso en un diario.</li><li>Diez agentes especializados (desarrollo, diseño, pruebas, correcciones, documentación y revisión) que funcionan como subagentes reales de Claude Code y se pueden editar o ampliar.</li><li>Filtro de revisión: revisores de solo lectura juzgan cada tarea y la devuelven con hallazgos si no está bien, así solo miras lo que ya pasó. También se puede aprobar desde el chat.</li><li>Monorepo de 5 paquetes en TypeScript (núcleo, CLI, MCP, servidor y web en React) con 46 archivos de prueba, integración continua y documentación publicada.</li></ul></details>
+          <div class="prj__links"><a class="prj__link" href="https://jmrojas06.github.io/AgentSprint/" rel="noopener">Documentación</a><a class="prj__link" href="https://www.npmjs.com/package/@jmrojas06/agentsprint-cli" rel="noopener">Paquete en npm</a><a class="prj__link" href="https://github.com/jmrojas06/AgentSprint" rel="noopener">Ver código en GitHub</a></div>
+        </div>
+        <dl class="nums"><div><dt class="mono">herramientas MCP</dt><dd>42</dd></div><div><dt class="mono">agentes especializados</dt><dd>10</dd></div><div><dt class="mono">archivos de prueba</dt><dd>46</dd></div></dl>
+        <p class="prj__s mono">TypeScript, Node.js, MCP, React, Fastify, Zod, Vitest, GitHub Actions</p>
+      </article>
+
       <article class="prj reveal" id="p-rag">
         <div class="prj__l">
-          <canvas class="emb" data-scene="emblem" data-kind="target" data-seed="17" aria-hidden="true"></canvas>
+          <canvas class="emb" data-scene="emblem" data-kind="target" data-seed="18" aria-hidden="true"></canvas>
           <span class="chip mono">Investigación</span>
           <span class="tag mono">Curso de Inteligencia Artificial, 2026</span>
         </div>
@@ -135,16 +152,50 @@
           <h3>RAG multimodal: recuperación y fusión entre modalidades</h3>
           <p class="prj__sum">Estudio experimental de cómo recuperar y combinar evidencia de texto, imagen, audio y tablas en un sistema RAG, con resultados y límites reportados sin maquillaje.</p>
           <p class="prj__note">Los benchmarks son pequeños y en parte sintéticos, y el trabajo lo declara.</p>
-          <details open><summary>Ver detalle</summary><ul class="points"><li>Texto a imagen con CLIP ViT-B/32 sobre Flickr30k: Recall@1 de 0,89 y MRR de 0,936 en 100 consultas.</li><li>Texto a audio con CLAP sobre AudioCaps: Recall@10 de 0,98.</li><li>Tablas: al añadir estructura (empresa, región, frecuencia) el Recall@1 subió de 0,67 a 1,00 frente a TF-IDF en un corpus controlado.</li><li>Detecté fuga de información en mi propio baseline y la corregí. Añadí detección y penalización de conflictos entre modalidades.</li></ul></details>
-          <a class="prj__link" href="https://www.linkedin.com/in/jose-manuel-rojas-401587226" rel="noopener">Ver en mi LinkedIn</a>
+          <details><summary>Ver detalle</summary><ul class="points"><li>Texto a imagen con CLIP ViT-B/32 sobre Flickr30k: Recall@1 de 0,89 y MRR de 0,936 en 100 consultas.</li><li>Texto a audio con CLAP sobre AudioCaps: Recall@10 de 0,98.</li><li>Tablas: al añadir estructura (empresa, región, frecuencia) el Recall@1 subió de 0,67 a 1,00 frente a TF-IDF en un corpus controlado.</li><li>Detecté fuga de información en mi propio baseline y la corregí. Añadí detección y penalización de conflictos entre modalidades.</li></ul></details>
+          <div class="prj__links"><a class="prj__link" href="https://www.linkedin.com/in/jose-manuel-rojas-401587226" rel="noopener">Ver en mi LinkedIn</a></div>
         </div>
         <dl class="nums"><div><dt class="mono">Recall@1 texto a imagen</dt><dd>0,89</dd></div><div><dt class="mono">Recall@10 texto a audio</dt><dd>0,98</dd></div><div><dt class="mono">Recall@1 en tablas con estructura</dt><dd>1,00</dd></div></dl>
         <p class="prj__s mono">Python, sentence-transformers, CLAP, scikit-learn, Colab</p>
       </article>
 
+      <article class="prj reveal" id="p-memoria">
+        <div class="prj__l">
+          <canvas class="emb" data-scene="emblem" data-kind="memory" data-seed="19" aria-hidden="true"></canvas>
+          <span class="chip mono">Reto de clase</span>
+          <span class="tag mono">Curso de Inteligencia Artificial, 2026</span>
+        </div>
+        <div class="prj__m">
+          <h3>Memoria de tres niveles y servidores MCP para agentes</h3>
+          <p class="prj__sum">Un gestor que le da memoria a un asistente en tres niveles, un RAG sobre PDF evaluado con RAGAS y dos servidores MCP para conectar herramientas a un agente.</p>
+          <p class="prj__note">La evaluación es pequeña: 5 preguntas sobre un solo documento.</p>
+          <details><summary>Ver detalle</summary><ul class="points"><li>Tres niveles de memoria coordinados por un gestor: corto (los últimos 10 mensajes), medio (resumen de la sesión con vigencia de 14 días) y largo (hechos duraderos con importancia, recencia y «derecho al olvido»).</li><li>Corto plazo: ventana de 10 mensajes o 8.000 caracteres que expulsa de a pares, para no romper el turno entre usuario y asistente.</li><li>Medio plazo: resumen progresivo de la sesión guardado con fecha en una base vectorial (Chroma). Solo se recupera lo de los últimos 14 días y se purga lo caducado.</li><li>Largo plazo: el modelo extrae hechos con una importancia de 1 a 10. Si un hecho ya existe lo actualiza en vez de duplicarlo y se recupera por similitud (60 %), importancia (25 %) y recencia (15 %, con decaimiento).</li><li>RAG sobre PDF evaluado con RAGAS en 5 preguntas: faithfulness 1,00, context recall 1,00, context precision 0,90 y answer relevancy 0,89.</li><li>Dos servidores MCP en Python (FastMCP): uno de notas con 3 herramientas y otro que busca y lee la documentación oficial de LangChain a partir de su índice llms.txt.</li></ul></details>
+          <div class="prj__links"><a class="prj__link" href="https://github.com/jmrojas06/Reto-2" rel="noopener">Ver código en GitHub</a></div>
+        </div>
+        <dl class="nums"><div><dt class="mono">niveles de memoria</dt><dd>3</dd></div><div><dt class="mono">faithfulness y context recall (RAGAS)</dt><dd>1,00</dd></div><div><dt class="mono">servidores MCP</dt><dd>2</dd></div></dl>
+        <p class="prj__s mono">Python, Claude, ChromaDB, MCP (FastMCP), RAGAS, sentence-transformers, LangSmith</p>
+      </article>
+
+      <article class="prj reveal" id="p-multiagente">
+        <div class="prj__l">
+          <canvas class="emb" data-scene="emblem" data-kind="agents" data-seed="20" aria-hidden="true"></canvas>
+          <span class="chip mono">Investigación</span>
+          <span class="tag mono">Experimento del curso de IA, 2026</span>
+        </div>
+        <div class="prj__m">
+          <h3>Arquitectura multiagente medida: ¿vale la pena un equipo de agentes?</h3>
+          <p class="prj__sum">Un sistema de agentes (orquestador, investigadores en paralelo, redactor y crítico) comparado contra un agente único con modelos reales, midiendo calidad, costo, latencia y costo de coordinación.</p>
+          <p class="prj__note">Parte de los notebooks base del curso, ejecutados con modelos reales, corregidos y documentados.</p>
+          <details><summary>Ver detalle</summary><ul class="points"><li>Dos implementaciones del mismo diseño: con LangGraph (grafo de estados) y desde cero con el SDK de OpenAI sobre OpenRouter, para comprobar que el resultado no depende del framework.</li><li>5 configuraciones, 8 preguntas por 3 repeticiones (24 tareas cada una, unas 1.000 llamadas) y un juez de otra familia de modelos para evitar sesgo. Todo el experimento costó unos 0,25 USD.</li><li>El agente único resultó entre 4 y 20 veces más barato y entre 2,5 y 6 veces más rápido, con calidad igual o mejor. Coordinar consume entre 21 % y 40 % del costo.</li><li>Optimizar (menos subtareas y rondas del crítico, o un enrutador) bajó el costo cerca de 30 % sin perder calidad, pero no alcanzó la meta de 40 %.</li><li>Medí el ruido: el orden entre agente único y multiagente se invierte entre las dos implementaciones, así que solo declaro firmes las diferencias de costo, latencia y número de llamadas.</li></ul></details>
+          <div class="prj__links"><a class="prj__link" href="https://github.com/jmrojas06/multiagente-tostaduria" rel="noopener">Ver código en GitHub</a></div>
+        </div>
+        <dl class="nums"><div class="wide"><dt class="mono">más barato el agente único</dt><dd>4 a 20x</dd></div><div><dt class="mono">menos costo al optimizar el multiagente</dt><dd>30 %</dd></div><div><dt class="mono">USD en todo el experimento</dt><dd>0,25</dd></div></dl>
+        <p class="prj__s mono">Python, LangGraph, OpenRouter, DeepSeek, Claude (juez), Pydantic, Jupyter</p>
+      </article>
+
       <article class="prj reveal" id="p-winback">
         <div class="prj__l">
-          <canvas class="emb" data-scene="emblem" data-kind="duo" data-seed="18" aria-hidden="true"></canvas>
+          <canvas class="emb" data-scene="emblem" data-kind="duo" data-seed="21" aria-hidden="true"></canvas>
           <span class="chip mono">En desarrollo</span>
           <span class="tag mono">Reto de IA con una empresa del sector salud</span>
         </div>
@@ -152,16 +203,16 @@
           <h3>Winback: predicción de reactivación y chatbot de WhatsApp</h3>
           <p class="prj__sum">Modelo que estima la probabilidad de que un afiliado retirado se reactive en 12 meses, para decidir a quién contactar primero, más un chatbot que conversa y pasa a un asesor a quien quiere volver.</p>
           
-          <details><summary>Ver detalle</summary><ul class="points"><li>46.942 eventos de retiro con 11,6 % de positivos, partición temporal (la prueba se mira una sola vez) y variables solo previas al retiro.</li><li>12 modelos comparados con intervalos de confianza por bootstrap. Elegí XGBoost por simplicidad, porque los ensambles empataban dentro del error.</li><li>ROC-AUC de 0,817 y PR-AUC de 0,408 (3,4 veces el azar). Con el umbral recomendado captura 72,8 % de los reactivados contactando al 28,2 %.</li><li>Etiquetas barajadas para descartar fuga, calibración de probabilidades y una auditoría interna con 10 fallas corregidas.</li><li>Chatbot con reglas para baja, queja y asesor sin gastar LLM. El modelo responde lo demás con RAG de texto y nunca ve la probabilidad ni datos de salud. Envío simulado, aún sin pruebas con WhatsApp real.</li></ul></details>
+          <details><summary>Ver detalle</summary><ul class="points"><li>Partición temporal (la prueba se mira una sola vez) y variables solo previas al retiro.</li><li>12 modelos comparados con intervalos de confianza por bootstrap. Elegí XGBoost por simplicidad, porque los ensambles empataban dentro del error.</li><li>Etiquetas barajadas para descartar fuga, calibración de probabilidades y una auditoría interna con 10 fallas corregidas.</li><li>Chatbot con reglas para baja, queja y asesor (sin gastar LLM); el modelo nunca ve la probabilidad ni datos de salud. Envío simulado, sin pruebas con WhatsApp real.</li></ul></details>
           
         </div>
-        <dl class="nums"><div><dt class="mono">ROC-AUC en prueba</dt><dd>0,82</dd></div><div class="wide"><dt class="mono">recall contactando al 28 %</dt><dd>72,8 %</dd></div><div><dt class="mono">modelos comparados</dt><dd>12</dd></div></dl>
+        <dl class="nums"><div><dt class="mono">modelos comparados</dt><dd>12</dd></div><div><dt class="mono">fallas corregidas en la auditoría</dt><dd>10</dd></div></dl>
         <p class="prj__s mono">Python, XGBoost, scikit-learn, FastAPI, Next.js, Supabase, pgvector</p>
       </article>
 
       <article class="prj reveal" id="p-rytm">
         <div class="prj__l">
-          <canvas class="emb" data-scene="emblem" data-kind="quarter" data-seed="19" aria-hidden="true"></canvas>
+          <canvas class="emb" data-scene="emblem" data-kind="quarter" data-seed="22" aria-hidden="true"></canvas>
           <span class="chip mono">Prototipo desplegado</span>
           <span class="tag mono">App móvil de entrenamiento (PWA)</span>
         </div>
@@ -178,7 +229,7 @@
 
       <article class="prj reveal" id="p-shiftos">
         <div class="prj__l">
-          <canvas class="emb" data-scene="emblem" data-kind="lanes" data-seed="20" aria-hidden="true"></canvas>
+          <canvas class="emb" data-scene="emblem" data-kind="lanes" data-seed="23" aria-hidden="true"></canvas>
           <span class="chip mono chip--soon">Próximamente</span>
           <span class="tag mono">Con Daniel Escobar</span>
         </div>
@@ -195,7 +246,7 @@
 
       <article class="prj reveal" id="p-wakit">
         <div class="prj__l">
-          <canvas class="emb" data-scene="emblem" data-kind="blocked" data-seed="21" aria-hidden="true"></canvas>
+          <canvas class="emb" data-scene="emblem" data-kind="blocked" data-seed="24" aria-hidden="true"></canvas>
           <span class="chip mono">Sin prueba en vivo todavía</span>
           <span class="tag mono">Shift Digital</span>
         </div>
@@ -212,7 +263,7 @@
 
       <article class="prj reveal" id="p-crm">
         <div class="prj__l">
-          <canvas class="emb" data-scene="emblem" data-kind="stairs" data-seed="22" aria-hidden="true"></canvas>
+          <canvas class="emb" data-scene="emblem" data-kind="stairs" data-seed="25" aria-hidden="true"></canvas>
           <span class="chip mono">Prototipo avanzado</span>
           <span class="tag mono">Extensión de un CRM open source (MIT)</span>
         </div>
@@ -229,7 +280,7 @@
 
       <article class="prj reveal" id="p-mostrador">
         <div class="prj__l">
-          <canvas class="emb" data-scene="emblem" data-kind="verified" data-seed="23" aria-hidden="true"></canvas>
+          <canvas class="emb" data-scene="emblem" data-kind="verified" data-seed="26" aria-hidden="true"></canvas>
           <span class="chip mono">En desarrollo</span>
           <span class="tag mono">Con Daniel Escobar</span>
         </div>
@@ -246,7 +297,7 @@
 
       <article class="prj reveal" id="p-fotograma">
         <div class="prj__l">
-          <canvas class="emb" data-scene="emblem" data-kind="frames" data-seed="24" aria-hidden="true"></canvas>
+          <canvas class="emb" data-scene="emblem" data-kind="frames" data-seed="27" aria-hidden="true"></canvas>
           <span class="chip mono">En uso</span>
           <span class="tag mono">Producción de video</span>
         </div>
@@ -263,7 +314,7 @@
 
       <article class="prj reveal" id="p-herdr">
         <div class="prj__l">
-          <canvas class="emb" data-scene="emblem" data-kind="layers" data-seed="25" aria-hidden="true"></canvas>
+          <canvas class="emb" data-scene="emblem" data-kind="layers" data-seed="28" aria-hidden="true"></canvas>
           <span class="chip mono">Prototipo avanzado</span>
           <span class="tag mono">Herramientas para trabajar con agentes</span>
         </div>
@@ -280,7 +331,7 @@
 
       <article class="prj reveal" id="p-web">
         <div class="prj__l">
-          <canvas class="emb" data-scene="emblem" data-kind="diag" data-seed="26" aria-hidden="true"></canvas>
+          <canvas class="emb" data-scene="emblem" data-kind="diag" data-seed="29" aria-hidden="true"></canvas>
           <span class="chip mono">En producción</span>
           <span class="tag mono">Sitio de la agencia</span>
         </div>
@@ -289,7 +340,7 @@
           <p class="prj__sum">Sitio bilingüe de la agencia con captación de leads, una bandeja privada y un bot de Instagram con IA opcional.</p>
           
           <details><summary>Ver detalle</summary><ul class="points"><li>Formulario tipo quiz con Turnstile, honeypot y límite por IP. Cada decisión de la bandeja se reclama de forma atómica para enviar un solo correo.</li><li>Correos con doble opt-in, consentimiento con huella, borrado a pedido y retención de 90 días (Ley 1581).</li><li>Bot de Instagram con webhook firmado: la IA solo clasifica intención y redacta respuestas públicas cortas. En mensajes directos contesta con textos fijos.</li></ul></details>
-          <a class="prj__link" href="https://www.linkedin.com/in/jose-manuel-rojas-401587226" rel="noopener">Ver en mi LinkedIn</a>
+          <div class="prj__links"><a class="prj__link" href="https://www.linkedin.com/in/jose-manuel-rojas-401587226" rel="noopener">Ver en mi LinkedIn</a></div>
         </div>
         <dl class="nums"><div><dt class="mono">de 140 commits son míos</dt><dd>54</dd></div></dl>
         <p class="prj__s mono">Next.js 15, TypeScript, Tailwind, Upstash Redis, Resend, Netlify</p>
@@ -297,7 +348,7 @@
 
       <article class="prj reveal" id="p-boosted">
         <div class="prj__l">
-          <canvas class="emb" data-scene="emblem" data-kind="triangle" data-seed="27" aria-hidden="true"></canvas>
+          <canvas class="emb" data-scene="emblem" data-kind="triangle" data-seed="30" aria-hidden="true"></canvas>
           <span class="chip mono">Backend entregado</span>
           <span class="tag mono">Computación en Internet III, equipo de 4</span>
         </div>
@@ -315,7 +366,7 @@
   </section>
 
   <section class="sec" id="garaje">
-    <canvas class="rule" data-scene="rule" data-seed="28" aria-hidden="true"></canvas>
+    <canvas class="rule" data-scene="rule" data-seed="31" aria-hidden="true"></canvas>
     <h2 class="st reveal">Hecho para durar</h2>
     <div class="gar">
       <p class="gar__quote reveal">Me apasionan los carros. Los de antes se hacían para durar décadas: pocas piezas, a la vista y fáciles de reparar. Quiero que mi código sea igual.</p>
@@ -325,11 +376,11 @@
   </section>
 
   <section class="sec" id="stack">
-    <canvas class="rule" data-scene="rule" data-seed="29" aria-hidden="true"></canvas>
-    <div class="st-wrap reveal"><h2 class="st st--r">Stack</h2><canvas class="deco d-stack" data-scene="shape" data-shape="rect" data-key="blue" data-cap="500" data-seed="30" aria-hidden="true"></canvas><canvas class="deco d-stack2" data-scene="shape" data-shape="circle" data-key="ochre" data-cap="400" data-seed="31" aria-hidden="true"></canvas></div>
+    <canvas class="rule" data-scene="rule" data-seed="32" aria-hidden="true"></canvas>
+    <div class="st-wrap reveal"><h2 class="st st--r">Stack</h2><canvas class="deco d-stack" data-scene="shape" data-shape="rect" data-key="blue" data-cap="500" data-seed="33" aria-hidden="true"></canvas><canvas class="deco d-stack2" data-scene="shape" data-shape="circle" data-key="ochre" data-cap="400" data-seed="34" aria-hidden="true"></canvas></div>
     <div class="stk">
-      <section class="reveal" style="--i:0"><h3 class="mono">IA y datos</h3><ul><li>Claude (Haiku, Sonnet, Opus)</li><li>APIs compatibles con OpenAI (Groq)</li><li>Workers AI y Gemini</li><li>RAG híbrido (texto completo y pgvector)</li><li>CLIP y CLAP</li><li>scikit-learn, XGBoost, LightGBM</li><li>Prompts con salida estructurada</li></ul></section>
-      <section class="reveal" style="--i:1"><h3 class="mono">Agentes</h3><ul><li>Claude Code (hooks, skills, subagentes)</li><li>MCP</li><li>n8n</li><li>OpenCode</li></ul></section>
+      <section class="reveal" style="--i:0"><h3 class="mono">IA y datos</h3><ul><li>Claude (Haiku, Sonnet, Opus)</li><li>APIs compatibles con OpenAI (Groq)</li><li>Workers AI y Gemini</li><li>RAG híbrido (texto completo y pgvector)</li><li>ChromaDB y RAGAS</li><li>CLIP y CLAP</li><li>scikit-learn, XGBoost, LightGBM</li><li>Prompts con salida estructurada</li></ul></section>
+      <section class="reveal" style="--i:1"><h3 class="mono">Agentes</h3><ul><li>Claude Code (hooks, skills, subagentes)</li><li>LangGraph</li><li>MCP (servidores en Python)</li><li>n8n</li><li>OpenCode</li><li>AgentSprint (npm)</li></ul></section>
       <section class="reveal" style="--i:2"><h3 class="mono">Lenguajes</h3><ul><li>TypeScript</li><li>Python</li><li>SQL</li><li>JavaScript</li></ul></section>
       <section class="reveal" style="--i:3"><h3 class="mono">Web y backend</h3><ul><li>React 19</li><li>Next.js</li><li>Astro</li><li>NestJS</li><li>FastAPI</li><li>Tailwind</li></ul></section>
       <section class="reveal" style="--i:0"><h3 class="mono">Datos e infraestructura</h3><ul><li>PostgreSQL y Supabase (RLS)</li><li>Cloudflare (Workers, D1, R2)</li><li>Vercel y Netlify</li><li>Docker</li></ul></section>
@@ -339,7 +390,7 @@
   </section>
 
   <section class="sec" id="trayectoria">
-    <canvas class="rule" data-scene="rule" data-seed="32" aria-hidden="true"></canvas>
+    <canvas class="rule" data-scene="rule" data-seed="35" aria-hidden="true"></canvas>
     <div class="track reveal">
       <div><p class="mono">Experiencia</p><h3><a href="https://aishiftdigital.com" rel="noopener">Shift Digital</a></h3><div class="job"><p class="job__role">Cofundador</p><p class="mono">2026 - actualidad</p><p>Agencia en etapa de lanzamiento: webs y automatización con IA para pymes en Colombia, Estados Unidos y España.</p><ul><li>Diseño y desarrollo de aishiftdigital.com, en producción, con captación de leads, bandeja privada y bot de Instagram.</li><li>Productos propios: CRM de WhatsApp, agente de atención con Claude, Mostrador y Shift OS.</li><li>Producción de contenido con motores de video propios.</li></ul></div></div>
       <div><p class="mono">Educación</p><h3>Universidad Icesi</h3><div class="job"><p class="job__role">Ingeniería de Sistemas</p><p class="mono">En curso, séptimo semestre</p><p>Inteligencia Artificial (retos con mentoría de la industria) y Computación en Internet III.</p></div></div>
@@ -348,10 +399,10 @@
 
   <section class="band" id="contacto" data-parallax>
     <div class="shapes" aria-hidden="true">
-      <canvas class="shape b-circle" data-scene="shape" data-shape="circle" data-key="red" data-cap="1000" data-seed="33" style="--z:12;--d:0.1s" aria-hidden="true"></canvas>
-      <canvas class="shape b-bar" data-scene="shape" data-shape="rect" data-key="ink" data-cap="1200" data-seed="34" style="--z:5;--d:0.4s" aria-hidden="true"></canvas>
-      <canvas class="shape b-blue" data-scene="shape" data-shape="rect" data-key="blue" data-cap="500" data-seed="35" style="--z:20;--d:0.7s" aria-hidden="true"></canvas>
-      <canvas class="shape b-ochre" data-scene="shape" data-shape="circle" data-key="ochre" data-cap="400" data-seed="36" style="--z:28;--d:0.9s" aria-hidden="true"></canvas>
+      <canvas class="shape b-circle" data-scene="shape" data-shape="circle" data-key="red" data-cap="1000" data-seed="36" style="--z:12;--d:0.1s" aria-hidden="true"></canvas>
+      <canvas class="shape b-bar" data-scene="shape" data-shape="rect" data-key="ink" data-cap="1200" data-seed="37" style="--z:5;--d:0.4s" aria-hidden="true"></canvas>
+      <canvas class="shape b-blue" data-scene="shape" data-shape="rect" data-key="blue" data-cap="500" data-seed="38" style="--z:20;--d:0.7s" aria-hidden="true"></canvas>
+      <canvas class="shape b-ochre" data-scene="shape" data-shape="circle" data-key="ochre" data-cap="400" data-seed="39" style="--z:28;--d:0.9s" aria-hidden="true"></canvas>
     </div>
     <div class="band__in reveal">
       <h2>Hablemos</h2>

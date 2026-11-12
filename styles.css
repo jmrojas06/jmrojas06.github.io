@@ -137,6 +137,7 @@ canvas { display: block; }
 .prj details[open] summary::before { transform: rotate(45deg); }
 .prj summary:hover { color: var(--reddk); }
 .prj ul.points { margin: var(--s3) 0 0; display: grid; gap: var(--s3); font-size: var(--t-sm); padding-left: 1.1em; list-style: disc; max-width: 64ch; }
+.prj__links { display: flex; flex-wrap: wrap; gap: 0 var(--s5); }
 .prj__link { display: inline-flex; align-items: center; min-height: 44px; margin-top: var(--s2); font-weight: 800; text-underline-offset: 4px; }
 
 /* cifras: filas número + etiqueta. Cada fila es un contenedor, así nunca se pisan */
